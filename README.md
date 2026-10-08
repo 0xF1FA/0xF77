@@ -1,5 +1,15 @@
 # CARBON II: mutable FORMAT as a machine
 
+The runnable next experiment is **[CARBON / AFTERIMAGE](afterimage/README.md)**:
+a persistent world of executable ground cards. Creatures rewrite those cards
+and can stamp new graph links with native FORMAT output. It includes a live
+instrument, checkpoint restore and a portable viewer of measured native runs.
+
+```sh
+cd afterimage
+python3 afterimage.py --serve --open
+```
+
 The new result is a finite-state transducer whose transition lookup is performed
 by two FORMAT-controlled reads. The Fortran harness has no state arithmetic,
 state-indexed array lookup, or conditional dispatch. The transition table is

@@ -1,0 +1,39 @@
+[
+  {
+    "binding": "static13",
+    "command": [
+      "/workspace/scratch/0cee19cac401/compiler/fc",
+      "-static-libgfortran",
+      "-std=f95",
+      "-O2",
+      "/workspace/scratch/0cee19cac401/carbon-ii/afterimage/direct_seam.f",
+      "-o",
+      "/tmp/tmpxpczka66/seam"
+    ],
+    "stdout": "                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n",
+    "neighbor_changed": true,
+    "blank_prefix": 24,
+    "whole_record_flush_preserves_neighbor": true
+  },
+  {
+    "binding": "shared14",
+    "command": [
+      "/workspace/scratch/0cee19cac401/compiler/fc-shared14",
+      "-std=f95",
+      "-O2",
+      "/workspace/scratch/0cee19cac401/carbon-ii/afterimage/direct_seam.f",
+      "-o",
+      "/tmp/tmpeys8qs8t/seam"
+    ],
+    "stdout": "                        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n",
+    "neighbor_changed": true,
+    "blank_prefix": 24,
+    "whole_record_flush_preserves_neighbor": true
+  },
+  {
+    "runtime_hashes": {
+      "compiler/root/usr/lib/gcc/x86_64-linux-gnu/13/libgfortran.a": "83ea6bc1781c8d8b03d969352c0894f988e596c6a12dab3af64b21ed7541a674",
+      "compiler/root/usr/lib/x86_64-linux-gnu/libgfortran.so.5": "342618ccfebe840446e4ef2b7893f4161b2084845e570f42d68a70bfde58a58d"
+    }
+  }
+]
