@@ -100,7 +100,12 @@ class Press:
             raise ValueError("Batch must contain 1..20000 rounds")
         with self.lock:
             spec = self.spec()
-            with tempfile.TemporaryDirectory(prefix="carbon-press-") as temp:
+            # Keep the staging directory beside the persistent world.  A
+            # system tempfile may live on another filesystem (for example
+            # /tmp versus a home mount), and os.replace() intentionally refuses
+            # cross-device moves because they are not atomic.
+            with tempfile.TemporaryDirectory(prefix=".carbon-press-",
+                                              dir=self.directory) as temp:
                 temp = Path(temp)
                 for name in ("world.spool", "heads.spool"):
                     shutil.copyfile(self.directory / name, temp / name)
