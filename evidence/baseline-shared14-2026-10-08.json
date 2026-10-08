@@ -1,0 +1,282 @@
+{
+  "timestamp": "2026-10-08T08:35:26.986223+00:00",
+  "compiler_command": [
+    "/workspace/scratch/0cee19cac401/compiler/fc-shared14"
+  ],
+  "compiler": {
+    "command": [
+      "/workspace/scratch/0cee19cac401/compiler/fc-shared14",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": ""
+  },
+  "historical_harness_date": "2026-10-07",
+  "note": "Historical harness date is a report label. This observation uses the timestamp above. Original sources and evidence remain unchanged.",
+  "runtime_probe_build": {
+    "command": [
+      "/workspace/scratch/0cee19cac401/compiler/fc-shared14",
+      "-std=legacy",
+      "-O2",
+      "/tmp/carbon-baseline-23ekkfcp/carbon/core/carbon.f",
+      "-o",
+      "/tmp/carbon-baseline-23ekkfcp/link"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "runtime_linkage": {
+    "command": [
+      "ldd",
+      "/tmp/carbon-baseline-23ekkfcp/link"
+    ],
+    "returncode": 0,
+    "stdout": "\tlinux-vdso.so.1 (0x00007fa593828000)\n\tlibgfortran.so.5 => /workspace/scratch/0cee19cac401/compiler/root/usr/lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007fa5934fc000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fa59340a000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fa5931f8000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fa5931ca000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007fa59382a000)\n",
+    "stderr": ""
+  },
+  "loaded_fortran_libraries": [
+    {
+      "path": "/workspace/scratch/0cee19cac401/compiler/root/usr/lib/x86_64-linux-gnu/libgfortran.so.5",
+      "sha256": "342618ccfebe840446e4ef2b7893f4161b2084845e570f42d68a70bfde58a58d"
+    }
+  ],
+  "harness": {
+    "command": [
+      "python3",
+      "/tmp/carbon-baseline-23ekkfcp/carbon/tests/check.py"
+    ],
+    "returncode": 0,
+    "stdout": "37/37 checks passed; GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\n",
+    "stderr": ""
+  },
+  "harness_results": {
+    "date": "2026-10-07",
+    "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "platform": "x86_64 / Linux",
+    "profile": "ASCII, little endian, default INTEGER=4 bytes",
+    "compiler_flags": "-std=legacy -ffixed-line-length-72 -fcheck=all",
+    "optimizations": [
+      "-O0",
+      "-O2",
+      "-O3"
+    ],
+    "checks": [
+      {
+        "name": "-O0: compile",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "O0: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O0: record lengths",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O0: four-state orbit",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O0: topology and marks",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O0: raw numeric feedback",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O0: native spool payload",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "resumeO0: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O0: restart continuation",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: compile",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "O2: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: record lengths",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: four-state orbit",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: topology and marks",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: raw numeric feedback",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: native spool payload",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "resumeO2: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: restart continuation",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O2: optimization independence",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: compile",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "O3: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: record lengths",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: four-state orbit",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: topology and marks",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: raw numeric feedback",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: native spool payload",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "resumeO3: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: restart continuation",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "-O3: optimization independence",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "ablation: compile",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "ablation: execution",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "ablation: feedback is causal",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "strict F2018: rejects integer FORMAT",
+        "passed": true,
+        "detail": "/tmp/carbon-check-rp2ikcep/strict.f:3:14:\n\n    3 |       WRITE(*,F) 1\n      |              1\nError: Legacy Extension: Non-character in FORMAT tag at (1)"
+      },
+      {
+        "name": "wide-word control: compile",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "wide-word control: profile rejection",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "internal A probe: compile",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "internal A probe: execution",
+        "passed": true,
+        "detail": ""
+      }
+    ],
+    "passed": 37,
+    "phenomena": {
+      "internal_a_probe": "external: (I4,I4)         \ninternal: (I4 I           \n",
+      "internal_a_differs": true
+    },
+    "source_sha256": "1833dd03ec359ab03b4c85d5bbd8dba5bbfd3d34d41390634e7ceaed77ba5dbb",
+    "spool_sha256": "9ec3229354ae7ee1f58016dda8e0f4c209692694ed9c3926a214bf0e5a42219d"
+  },
+  "historical_payload_comparison": {
+    "frames.txt": {
+      "original_sha256": "85bb658c5509a083294a56e47bc6638ef8be85e950ec077d7832a28e772d62d5",
+      "observed_sha256": "85bb658c5509a083294a56e47bc6638ef8be85e950ec077d7832a28e772d62d5",
+      "identical": true
+    },
+    "spool.dat": {
+      "original_sha256": "9ec3229354ae7ee1f58016dda8e0f4c209692694ed9c3926a214bf0e5a42219d",
+      "observed_sha256": "9ec3229354ae7ee1f58016dda8e0f4c209692694ed9c3926a214bf0e5a42219d",
+      "identical": true
+    },
+    "trace.txt": {
+      "original_sha256": "8c31dda85ca1196856c5b0ff1bad96973e5af4bc25e919799231ec2813047452",
+      "observed_sha256": "8c31dda85ca1196856c5b0ff1bad96973e5af4bc25e919799231ec2813047452",
+      "identical": true
+    },
+    "internal-a.txt": {
+      "original_sha256": "b61411cc1be2b7393648ed829859508dec20b30a30269fc562ef29ca50200b65",
+      "observed_sha256": "b61411cc1be2b7393648ed829859508dec20b30a30269fc562ef29ca50200b65",
+      "identical": true
+    }
+  }
+}

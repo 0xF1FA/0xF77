@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-08T12:45:37.362Z",
+  "replays": [
+    {
+      "title": "Afterimage",
+      "events": 25200,
+      "hashes": {
+        "world.spool": "47ceb290f39c987f2f0653819dd384d2f5a2bbd9a01ad969fc3c8e6ae117fee1",
+        "heads.spool": "b8bf229d3bf23dcad18b598c7356111e75c011d9fd2313fcbfa2ce37d4e9532b"
+      },
+      "passed": true
+    },
+    {
+      "title": "The folded sheet",
+      "events": 20000,
+      "hashes": {
+        "world.spool": "7dbe6815b08989a1fcef031e0ac51577fd3b98b67e2bfd932a2ecbed812d7096",
+        "heads.spool": "95a866336a5995dc6e0565aa53334d6e51af45ce136ac765d873c9c2ae420100"
+      },
+      "passed": true
+    },
+    {
+      "title": "One creature",
+      "events": 14000,
+      "hashes": {
+        "world.spool": "62fc7c9ba682d3698743663360dbdebf4504d556de46f377a9b59800226b4a90",
+        "heads.spool": "205d36195d3df23d5775af9fb6dc2fb537217fbd1c2c26fce5b65c9cbbf31be1"
+      },
+      "passed": true
+    }
+  ],
+  "live": {
+    "native_play_step": true,
+    "paint": true,
+    "splice": true,
+    "genome_edit": true,
+    "checkpoint_download": true,
+    "invalid_edit_rejected": true,
+    "origin_guard": true,
+    "reseed": true
+  },
+  "page_errors": [],
+  "mobile": {
+    "width": 390,
+    "horizontal_overflow": false
+  },
+  "replay_controls": true,
+  "passed": true
+}

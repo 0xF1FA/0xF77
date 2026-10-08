@@ -1,0 +1,39 @@
+{
+  "compiler": "GNU Fortran 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1)",
+  "runtime": "Static libgfortran from libgfortran-13-dev 13.3.0-6ubuntu2~24.04.1",
+  "inspected": [
+    {
+      "path": "libgfortran/io/format.c",
+      "repository": "gcc-mirror/gcc",
+      "ref": "releases/gcc-13.3.0",
+      "blob_sha": "3531fb20ddb1518161ea9c1b7e6d8d622f9545c8",
+      "url": "https://github.com/gcc-mirror/gcc/blob/releases/gcc-13.3.0/libgfortran/io/format.c"
+    },
+    {
+      "path": "libgfortran/io/transfer.c",
+      "repository": "gcc-mirror/gcc",
+      "ref": "releases/gcc-13.3.0",
+      "blob_sha": "ebad096eeabf7f914751f27711efbee93db9dda6",
+      "url": "https://github.com/gcc-mirror/gcc/blob/releases/gcc-13.3.0/libgfortran/io/transfer.c"
+    },
+    {
+      "path": "libgfortran/io/read.c",
+      "repository": "gcc-mirror/gcc",
+      "ref": "releases/gcc-13.3.0",
+      "blob_sha": "bf2500fc5d050b392144feccbc257ec649dc73b8",
+      "url": "https://github.com/gcc-mirror/gcc/blob/releases/gcc-13.3.0/libgfortran/io/read.c"
+    }
+  ],
+  "standard": "https://wg5-fortran.org/ARCHIVE/Fortran77.html",
+  "documentation": [
+    "https://gcc.gnu.org/onlinedocs/gfortran/Variable-FORMAT-expressions.html",
+    "https://gcc.gnu.org/onlinedocs/gfortran/Hollerith-constants-support.html",
+    "https://gcc.gnu.org/onlinedocs/gfortran/Commas-in-FORMAT-specifications.html"
+  ],
+  "observations": [
+    "transfer.c read_sf_internal takes a comma-scanning slow path when compile_options.warn_std == 0; its comma checks do not test sf_read_comma.",
+    "read.c read_a disables sf_read_comma for character reads. transfer.c external read_sf checks this flag before treating a comma as a separator.",
+    "format.c parses and caches FORMAT descriptions and contains a synthetic colon at reversion. Its parser copies the source format when constructing a new parsed description.",
+    "Runtime parser tokens show rounding, decimal, DT, EN/ES and other later descriptors. Untested features in the catalogue are labeled source-only."
+  ]
+}
