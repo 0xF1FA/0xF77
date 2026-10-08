@@ -54,10 +54,29 @@ individually idempotent transition systems whose alternation cycles.
 behavior and evidence. `assessment.md` states the responsibility split and
 limits. `evidence/source_audit.json` pins the runtime source inspected.
 
-The earlier four-state loop and checkpoint result are inherited from the task
-brief and were not retested. Their original source and precise toolchain were
-not retrievable in this execution. No novelty claim is made for formatting
-computation, self-copying, or runtime FORMAT descriptions themselves.
+At the original CARBON II measurement, the earlier four-state loop and checkpoint
+result were inherited from the task brief; their sources were not retrievable.
+They have now been recovered unchanged in `baseline/carbon/` and retested with
+both static GNU 13.3 and shared libgfortran 14.2. All 37 checks passed under each
+binding, and all four historical payloads match byte for byte. The original
+CARBON II corpus was independently rerun: all 1,584 traces passed again.
+See `RECONCILIATION.md` and the separately dated files in `evidence/`.
+
+Run the original numeric-plate machine and preserve its historical evidence:
+
+```sh
+cd baseline/carbon
+sh run.sh
+cd ../..
+python3 tools/reverify_baseline.py --output evidence/baseline-current.json
+```
+
+The original 31-page research/design dossier, updated with the forward work,
+is in `research/report/report.pdf`. Its ReportLab authoring sources are beside
+it. The report contains 28 mechanisms, ten distinct concepts, the scored
+shortlist, the selected architecture, eight outsider predictions and the new
+reproduction findings. No novelty claim is made for formatting computation,
+self-copying, or runtime FORMAT descriptions themselves.
 
 The current limits include fixed-capacity records, host-supplied repeated I/O,
 and no demonstrated growing read/write tape, autonomous general predicate

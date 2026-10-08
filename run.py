@@ -60,9 +60,11 @@ def run_suite(fc):
     evidence = dict(timestamp=datetime.now(timezone.utc).isoformat(),
                     machine=platform.machine(), system=platform.platform(),
                     compiler=command([*fc, '--version']), runs=[],
-                    inherited_baseline='Accepted from brief, not retested: '
-                    'four-state CARBON cycle, ablation, optimization survival, '
-                    'checkpoint/restart. Exact original source unavailable.')
+                    inherited_baseline='The original CARBON II run inherited '
+                    'the baseline because its source was unavailable. The '
+                    'recovered baseline is now in baseline/carbon; separately '
+                    'dated re-verification is in evidence/baseline-*.json. '
+                    'This suite tests CARBON II only.')
     evidence['installed_packages'] = command(['dpkg-query','-W',
         'gcc-13-x86-64-linux-gnu','libgfortran5'])
     evidence['runtime_binding_note'] = (
