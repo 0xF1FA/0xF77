@@ -19,6 +19,23 @@ The viewer opens at `http://127.0.0.1:1977`. Use `--port N` if that port is busy
 Set `FC` to a compiler command and arguments when needed. The ordinary press has
 no Python packages, Node packages, remote assets, or browser transition engine.
 
+If you downloaded a ZIP instead of cloning with Git, update it by downloading
+the latest ZIP and copying only the program files over the extracted
+`afterimage/` directory. This preserves your persistent `world/` directory:
+
+```sh
+cd /path/to/0xF77-main/afterimage
+mkdir -p /tmp/carbon-update
+curl -L https://github.com/0xF1FA/0xF77/archive/refs/heads/main.zip \
+  -o /tmp/carbon-update/0xF77-main.zip
+unzip -q -o /tmp/carbon-update/0xF77-main.zip -d /tmp/carbon-update
+cp -a /tmp/carbon-update/0xF77-main/afterimage/. .
+```
+
+The ZIP contains no `.git` directory, so `git pull` is only available when the
+repository was installed with `git clone`. Do not delete `world/` when updating
+a ZIP installation; it contains the current world state.
+
 The downloadable `CARBON-AFTERIMAGE.html` opens directly in a browser without a
 compiler. It contains three measured native runs: 59,200 actual transitions,
 not a JavaScript simulation. Rebuild it from the source with:
